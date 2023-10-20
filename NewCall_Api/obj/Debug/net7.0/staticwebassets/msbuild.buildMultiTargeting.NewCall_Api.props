@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\NewCall_Api.props" />
+</Project>
