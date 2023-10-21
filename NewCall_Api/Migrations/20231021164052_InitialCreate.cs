@@ -11,6 +11,22 @@ namespace NewCall_Api.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Admins",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    identifiant = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
+                    password = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    passwordHash = table.Column<string>(type: "TEXT", nullable: true),
+                    passwordSalt = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Admins", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Students",
                 columns: table => new
                 {
@@ -29,6 +45,9 @@ namespace NewCall_Api.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Admins");
+
             migrationBuilder.DropTable(
                 name: "Students");
         }

@@ -10,14 +10,35 @@ using NewCall_Api.Database;
 namespace NewCall_Api.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20231021153121_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20231021180250_admin")]
+    partial class admin
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.12");
+
+            modelBuilder.Entity("NewCall_Api.Models.Admins", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("identifiant")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Admins");
+                });
 
             modelBuilder.Entity("NewCall_Api.Models.Students", b =>
                 {

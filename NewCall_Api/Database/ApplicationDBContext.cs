@@ -20,5 +20,7 @@ namespace NewCall_Api.Database
         {
             optionsBuilder.UseSqlite("Data Source=call.db");
         }
+
+        public DbSet<Admins> Admins { get; set; }
     }
 }
