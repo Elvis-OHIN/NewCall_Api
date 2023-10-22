@@ -11,6 +11,11 @@ namespace NewCall_Api.Database
     public class ApplicationDBContext : DbContext
     {
         public DbSet<Students> Students { get; set; }
+
+        public DbSet<Absences> Absences { get; set; }
+
+        public DbSet<Admins> Admins { get; set; }
+
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options)
             : base(options)
         {
@@ -21,6 +26,14 @@ namespace NewCall_Api.Database
             optionsBuilder.UseSqlite("Data Source=call.db");
         }
 
-        public DbSet<Admins> Admins { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Absences>()
+                .HasOne(a => a.student)
+                .WithMany(s => s.Absences)
+                .HasForeignKey(a => a.studentId);
+        
+        }
+
     }
 }

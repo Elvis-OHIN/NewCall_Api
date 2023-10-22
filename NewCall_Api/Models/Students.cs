@@ -19,6 +19,8 @@ namespace NewCall_Api.Models
         [Required(ErrorMessage = "Le statut est requis.")]
         [StringLength(20, ErrorMessage = "Le statut doit comporter au maximum 20 caractères.")]
         public string statut { get; set; }
+
+        public ICollection<Absences>? Absences { get; set; }
         public Students(int id, string firstname, string lastname, string statut)
         {
             this.id = id;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Elvis\\Source\\Repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj": {}
+    "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Elvis\\Source\\Repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj": {
+    "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elvis\\Source\\Repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
+        "projectUniqueName": "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
         "projectName": "NewCall_Api",
-        "projectPath": "C:\\Users\\Elvis\\Source\\Repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
+        "projectPath": "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
         "packagesPath": "C:\\Users\\Elvis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elvis\\Source\\Repos\\NewCall_Api\\NewCall_Api\\obj\\",
+        "outputPath": "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Elvis\\AppData\\Roaming\\NuGet\\NuGet.Config",
