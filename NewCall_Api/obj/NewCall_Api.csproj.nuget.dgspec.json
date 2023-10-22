@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\niho\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj": {}
+    "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj": {}
   },
   "projects": {
-    "D:\\niho\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj": {
+    "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\niho\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
+        "projectUniqueName": "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
         "projectName": "NewCall_Api",
-        "projectPath": "D:\\niho\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
-        "packagesPath": "C:\\Users\\elvis\\.nuget\\packages\\",
-        "outputPath": "D:\\niho\\NewCall_Api\\NewCall_Api\\obj\\",
+        "projectPath": "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
+        "packagesPath": "C:\\Users\\Elvis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\elvis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elvis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,9 +40,45 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.9, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
