@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NewCall_Api.Database;
 
@@ -10,9 +11,11 @@ using NewCall_Api.Database;
 namespace NewCall_Api.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231128205226_InitialCre")]
+    partial class InitialCre
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.12");
@@ -35,10 +38,12 @@ namespace NewCall_Api.Migrations
                     b.Property<DateTime>("startDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("studentId")
+                    b.Property<int>("studentid")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("id");
+
+                    b.HasIndex("studentid");
 
                     b.ToTable("Absences");
                 });
@@ -88,6 +93,17 @@ namespace NewCall_Api.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("NewCall_Api.Models.Absences", b =>
+                {
+                    b.HasOne("NewCall_Api.Models.Students", "student")
+                        .WithMany()
+                        .HasForeignKey("studentid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("student");
                 });
 #pragma warning restore 612, 618
         }

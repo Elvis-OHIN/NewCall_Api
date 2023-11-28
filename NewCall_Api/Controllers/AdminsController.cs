@@ -109,7 +109,7 @@ namespace NewCall_Api.Controllers
         // POST: Admins/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpGet("Edit/{id}")]
+        [HttpPut("Edit/{id}")]
         public async Task<IActionResult> Edit(int id, [Bind("id,identifiant,password,passwordHash,passwordSalt")] Admins admins)
         {
             if (id != admins.id)
@@ -141,7 +141,7 @@ namespace NewCall_Api.Controllers
         }
 
         // GET: Admins/Delete/5
-        [HttpGet("Delete/{id}")]
+        [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Admins == null)

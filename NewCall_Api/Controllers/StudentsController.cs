@@ -51,7 +51,7 @@ namespace NewCall_Api.Controllers
         }
 
         // GET: Students/Create
-        [HttpGet]
+        [HttpPost]
         [Route("Create")]
         public IActionResult Create()
         {
@@ -71,25 +71,10 @@ namespace NewCall_Api.Controllers
             return Ok(students);
         }
 
-        // GET: Students/Edit/5
-        [HttpGet("Edit/{id}")]
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Students == null)
-            {
-                return NotFound();
-            }
-
-            var students = await _context.Students.FindAsync(id);
-            if (students == null)
-            {
-                return NotFound();
-            }
-            return Ok(students);
-        }
+  
 
         // POST: Students/Edit/5
-        [HttpPost("Edit/{id}")]
+        [HttpPut("Edit/{id}")]
         public async Task<IActionResult> Edit(int id, [Bind("id,firstname,lastname,statut")] Students students)
         {
             if (id != students.id)
@@ -120,27 +105,9 @@ namespace NewCall_Api.Controllers
             return Ok(students);
         }
 
-        // GET: Students/Delete/5
-        [HttpGet("Delete/{id}")]
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Students == null)
-            {
-                return NotFound();
-            }
-
-            var students = await _context.Students
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (students == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(students);
-        }
 
         // POST: Students/Delete/5
-        [HttpPost("Delete/{id}")]
+        [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Students == null)

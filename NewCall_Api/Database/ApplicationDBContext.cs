@@ -28,10 +28,7 @@ namespace NewCall_Api.Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Absences>()
-                .HasOne(a => a.student)
-                .WithMany(s => s.Absences)
-                .HasForeignKey(a => a.studentId);
+          
         
         }
 

@@ -11,11 +11,8 @@ namespace NewCall_Api.Models
         public int id { get; set; }
 
    
-        [Required(ErrorMessage = "L'identifiant de l'étudiant est requis.")]
+        [Required(ErrorMessage = "L'étudiant est requis.")]
         public int studentId { get; set; }
-
-        
-        public required Students student { get; set; }
 
         [Required(ErrorMessage = "La date de début d'absence est requise.")]
         public DateTime startDate { get; set; }
