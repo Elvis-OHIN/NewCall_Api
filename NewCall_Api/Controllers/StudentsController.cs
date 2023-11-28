@@ -11,7 +11,7 @@ using NewCall_Api.Models;
 namespace NewCall_Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class StudentsController : Controller
     {
         private readonly ApplicationDBContext _context;
