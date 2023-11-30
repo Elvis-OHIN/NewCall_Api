@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -29,24 +31,39 @@ namespace NewCall_Api.Controllers
             var applicationDBContext = _context.Absences;
             return Ok(await applicationDBContext.ToListAsync());
         }
-        // GET: Absences
-        [HttpGet("Date/{date}")]
-        public async Task<IActionResult> GetDate(DateTime? dateTime)
+
+        [HttpGet("Date")]
+        public async Task<IActionResult> GetDate(DateTime? date)
         {
-            if (dateTime == null || _context.Absences == null)
+           
+            if (date == null || _context.Absences == null || _context.Students == null)
             {
                 return NotFound();
             }
+           
 
             var absences = await _context.Absences
-                .FirstOrDefaultAsync(m => m.startDate == dateTime);
-            if (absences == null)
+                                         .Where(a => a.startDate == date.Value)
+                                         .Select(a => a.studentId)
+                                         .ToListAsync();
+
+            if (!absences.Any())
             {
-                return NotFound();
+                return NotFound("No absences found for the given date.");
             }
 
-            return Ok(absences);
+            var students = await _context.Students
+                                         .Where(s => absences.Contains(s.id))
+                                         .ToListAsync();
+
+            if (!students.Any())
+            {
+                return NotFound("No students found for the given absences.");
+            }
+
+            return Ok(students);
         }
+
         // GET: Absences/Details/5
         [HttpGet("Details/{id}")]
         public async Task<IActionResult> Details(int? id)
