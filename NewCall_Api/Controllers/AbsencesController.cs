@@ -49,7 +49,8 @@ namespace NewCall_Api.Controllers
 
             if (!absences.Any())
             {
-                return NotFound("No absences found for the given date.");
+                
+                return Ok(absences);
             }
 
             var students = await _context.Students
@@ -58,7 +59,7 @@ namespace NewCall_Api.Controllers
 
             if (!students.Any())
             {
-                return NotFound("No students found for the given absences.");
+                return Ok(students);
             }
 
             return Ok(students);

@@ -11673,19 +11673,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elvis\\.nuget\\packages\\": {}
+    "C:\\Users\\Elvis\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\niho\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
+      "projectUniqueName": "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
       "projectName": "NewCall_Api",
-      "projectPath": "D:\\niho\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
-      "packagesPath": "C:\\Users\\elvis\\.nuget\\packages\\",
-      "outputPath": "D:\\niho\\NewCall_Api\\NewCall_Api\\obj\\",
+      "projectPath": "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\NewCall_Api.csproj",
+      "packagesPath": "C:\\Users\\Elvis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Elvis\\source\\repos\\NewCall_Api\\NewCall_Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\elvis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Elvis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11775,7 +11775,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

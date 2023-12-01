@@ -50,16 +50,9 @@ namespace NewCall_Api.Controllers
             return Ok(students);
         }
 
-        // GET: Students/Create
-        [HttpPost]
-        [Route("Create")]
-        public IActionResult Create()
-        {
-            return Ok();
-        }
-
         // POST: Students/Create
         [HttpPost]
+        [Route("Create")]
         public async Task<IActionResult> Create([Bind("id,firstname,lastname,statut")] Students students)
         {
             if (ModelState.IsValid)
